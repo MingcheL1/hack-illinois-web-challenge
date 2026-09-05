@@ -25,3 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.sky{
+  background-image: radial-gradient(circle at 50% 50%,  #59c3de
+  , #19bbe3);
+}
