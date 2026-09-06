@@ -4,8 +4,8 @@ import { FC, useState } from "react";
 
 export const Compact: FC<eventProps> = ({ data }) => {
     const [day, setDay]=useState("Friday");
-    const filteredEvents=data?.events.filter((event)=>{convertTime(event.startTime).includes(day); console.log(convertTime(event.startTime))});
-    
+    const filteredEvents=data?.events.filter((event)=>{ return convertTime(event.startTime).includes(day);});
+    console.log(filteredEvents);
     return (
         <div className="relative w-full h-screen ">
         <img
