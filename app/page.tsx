@@ -9,7 +9,8 @@ import { useState, useEffect } from "react";
 
 
 export default function Home() {
-    const [data, setData]=useState<EventData|null>(null); //can't interact until I know what the variable type is
+    const [data, setData]=useState<EventData|null>(null);
+    const [mode, setMode]=useState("compact");
     useEffect(()=>{
         async function loadEvents(){
             try{
@@ -31,7 +32,9 @@ export default function Home() {
     <div className="sky min-h-screen">
       <Navbar/>
       <Surface/>
-      <Compact data={data}/>
+      {
+        mode==="compact" ? <Compact data={data}/> : <Events data={data}/>
+      }
     </div>
   )
 }

@@ -13,12 +13,12 @@ export const Compact: FC<eventProps> = ({ data }) => {
             alt="Compact Mode"
             className="w-full h-full object-cover absolute blur-[3px]"
         />
-        <div className="inline-flex gap-2 mb-8 p-2 rounded-2xl bg-white/15 backdrop-blur-sm shadow-lg border border-white/30">
+        <div className="inline-flex gap-2 mb-8 p-2">
             {
                 ["Friday", "Saturday", "Sunday"].map((d) => {
                     const active=day===d;
                     return(
-                        <button key={d} onClick={ ()=> {setDay(d); console.log(d)}} className={`px-4 py-2 rounded-lg ${active ? 'bg-white/30' : 'bg-white/20 hover:bg-white/30'}`}>
+                        <button key={d} onClick={ ()=> {setDay(d); console.log(d)}} className={`px-4 py-2 rounded-lg backdrop-blur-sm ${active ? 'bg-black/30' : 'bg-black/20 hover:bg-black/30'}`}>
                             {d}
                         </button>
                     );
@@ -27,14 +27,31 @@ export const Compact: FC<eventProps> = ({ data }) => {
         </div>
 
         <div className="absolute inset-0 mt-20">
-            {filteredEvents?.map((event) => (
-            <div
-                key={event.eventID}
-                className=" text-white rounded-lg shadow-md p-4 m-4"
-            >
-                <h2 className="text-xl font-bold">{event.startTime}</h2>
+
+            <div className="relative mt-8 max-w-full overflow-hidden rounded-md border border-white/30 bg-white10 p-6 shadow-2xl backdrop-blur-2xl">
+
+
+
+                <div className="relative z-10">
+                    <div className="mb-6 flex items-end justify-between">
+                        <h1 className="text-lg uppercase tracking-[0.25em] text-white/60">Schedule</h1>
+                        <p className="text-sm text-white/60">{day}</p>
+                    
+                    </div>
+                </div>
+                
+                {filteredEvents?.map((event) => (
+                    <div
+                        key={event.eventID}
+                        className=" text-white rounded-md shadow-md p-4 m-4"
+                    >
+                        
+                            
+                        <h2 className="text-xl font-bold">{convertTime(event.startTime)} - {convertTime(event.endTime)}</h2>
+                    </div>
+                ))} 
             </div>
-            ))}
+
         </div> 
         </div>
   );
