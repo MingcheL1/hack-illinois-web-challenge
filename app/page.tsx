@@ -1,4 +1,5 @@
 "use client";
+import { Compact } from "@/components/compact";
 import { Events } from "@/components/events";
 import { Navbar } from "@/components/navbar";
 import { Surface } from "@/components/surface";
@@ -30,7 +31,7 @@ export default function Home() {
     <div className="sky min-h-screen">
       <Navbar/>
       <Surface/>
-      <Events data={data}/>
+      <Compact data={data}/>
     </div>
   )
 }

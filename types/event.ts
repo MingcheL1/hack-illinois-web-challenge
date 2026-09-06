@@ -20,3 +20,7 @@ export type Event={
 export type EventData={
     events: Event[]
 }
+
+export type eventProps={
+    data: EventData|null;
+}

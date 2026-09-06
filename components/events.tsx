@@ -1,9 +1,7 @@
 "use client"
-import { EventData } from "@/types/event";
+import { EventData, eventProps } from "@/types/event";
 import { FC, useEffect, useState } from "react";
-type eventProps={
-    data: EventData|null;
-}
+
 export const Events: FC<eventProps>=({data})=>{
     return(
         <div>
