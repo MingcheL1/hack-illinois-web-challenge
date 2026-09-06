@@ -11,14 +11,17 @@ export const Navbar: FC = () => {
         <div className="lg:hidden">
         </div>
         <div className="space-x-12 text-2xl">
-          <Link href="/pages/home" className="">
-            Home
-          </Link>
           <Link href="/" className="">
             Schedule
           </Link>
-          <Link href="/pages/about" className="">
-            About
+          <Link href="https://2025.hackillinois.org/mentors" className="">
+            Mentors
+          </Link>
+          <Link href="https://2025.hackillinois.org/prizes" className="">
+            Prizes
+          </Link>
+          <Link href="/" className="">
+            Credits
           </Link>
         </div>
       </div>
