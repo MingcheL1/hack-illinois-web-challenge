@@ -2,7 +2,7 @@ export type Event={
     eventID: number;
     name: string;
     description: string;
-    starTime: number;
+    startTime: number;
     endTime:number;
     locations: {
         description: string;
