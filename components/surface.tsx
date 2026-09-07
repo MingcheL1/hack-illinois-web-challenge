@@ -3,7 +3,7 @@ import { FC } from "react";
 export const Surface: FC = () => {
     return(
         <div>
-            <div className="font-bold text-center">
+            <div className="font-bold text-center mt-20">
                 <h1 className="text-8xl text-white mt-5">HackIllinois 2027</h1>
                 <p className="text-3xl">Take a Deep Dive into Our Schedule</p>
             </div>

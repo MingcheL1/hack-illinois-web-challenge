@@ -7,7 +7,7 @@ export const Events: FC<eventProps>=({data})=>{
         <div>
             {
                 data?.events.map((event)=>(
-                    <div key={event.eventID} className="bg-white text-black rounded-lg shadow-md p-4 m-4">
+                    <div key={event.eventId} className="bg-white text-black rounded-lg shadow-md p-4 m-4">
                         <h2 className="text-xl font-bold">{event.name}</h2>
                     </div>
                 ))

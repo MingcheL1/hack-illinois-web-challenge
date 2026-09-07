@@ -6,8 +6,9 @@ export const Navbar: FC = () => {
 
 
   return (
-    <div className="mx-auto mt-8 text-black py-2 h-auto font-mono w-xl rounded-xl bg-yellow-300 ">
-      <div className="flex flex-row  place-items-center justify-center px-4">
+    <div className="flex flex-row mx-auto mt-4 ml-8 text-black py-2 h-auto font-mono gap-x-xl w-auto rounded-xl">
+      <div className=""><img src="/images/HackIllinois.png" className="w-40 h-auto"></img></div>
+      <div className="gap-12 ml-auto mt-4 text-white place-items-center justify-center px-4">
         <div className="lg:hidden">
         </div>
         <div className="space-x-12 text-2xl">

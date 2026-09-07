@@ -30,7 +30,7 @@ export default function Home() {
     },[])
   return (
     <div className="sky min-h-screen">
-      <Navbar/>
+      <Navbar />
       <Surface/>
       {
         mode==="compact" ? <Compact data={data}/> : <Events data={data}/>
