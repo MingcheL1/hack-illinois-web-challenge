@@ -9,12 +9,7 @@ export type Event={
         latitude:number;
         lontitude:number;
     }]
-    sponsor: string;
-    eventType: string;
     points: number;
-    isMandatory:boolean;
-    mapImageURL: string;
-    menu:string[]
 }
 
 export type EventData={

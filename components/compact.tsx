@@ -27,7 +27,7 @@ export const Compact: FC<eventProps> = ({ data }) => {
 
 
 
-                    <div className="relative mt-8 w-[1232px] ml-10 overflow-hidden rounded-md border border-white/49 bg-blue-900/80 backdrop-blur-[2px] p-6  ">
+                    <div className="relative mt-8 w-308 ml-10 overflow-hidden rounded-md bg-blue-900/80 backdrop-blur-[2px] p-6  ">
 
 
 
@@ -40,6 +40,7 @@ export const Compact: FC<eventProps> = ({ data }) => {
                         </div>
                         
                         {filteredEvents?.map((event) => (
+
                             <div
                                 key={event.eventId}
                                 className="mb-6 flex items-stretch gap-6"
@@ -57,9 +58,10 @@ export const Compact: FC<eventProps> = ({ data }) => {
                                         {convertTime(event.endTime,false)}
                                     </p>
                                 </div>
-                                <div className="rounded-xl border boerder-white/20 bg-blue-900/50 p-4 ml-20">
+                                <div className="rounded-xl border border-white/10 bg-blue-900/50 p-4 ml-20">
                                     <h1 className="text-2xl font-bold">{event.name}</h1>    
-                                    {event?.locations[0]?.description && (<h2 className="mt-1 text-sm text-white font-bold flex flex-row"><MapPin className="w-3 pb-1 mr-3"/>   {event.locations[0].description}</h2>)}
+                                    <div className="flex flex-row gap-x-8">{event?.locations[0]?.description && (<h2 className="mt-1 text-sm text-white font-bold flex flex-row"><MapPin className="w-3 pb-1 mr-3"/>   {event.locations[0].description}</h2>)}
+                                    <div className="bg-green-500/50 text-white text-xs w-8 text-center py-2 h-auto rounded-lg mb-4 mt-1"><p>{event.points}</p></div></div>
                                     <p className="text-white text-sm">{event.description}</p>
                                 </div>
 
