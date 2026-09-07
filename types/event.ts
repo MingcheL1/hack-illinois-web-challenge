@@ -4,11 +4,11 @@ export type Event={
     description: string;
     startTime: number;
     endTime:number;
-    locations: {
+    locations: [{
         description: string;
         latitude:number;
         lontitude:number;
-    }
+    }]
     sponsor: string;
     eventType: string;
     points: number;
