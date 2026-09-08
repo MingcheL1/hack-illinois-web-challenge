@@ -18,4 +18,5 @@ export type EventData={
 
 export type eventProps={
     data: EventData|null;
+    up?:()=>void;
 }

@@ -6,7 +6,7 @@ export const Navbar: FC = () => {
 
 
   return (
-    <div className="flex flex-row mx-auto mt-4 ml-8 text-black py-2 h-auto font-mono gap-x-xl w-auto rounded-xl">
+    <div className="fixed z-100 flex flex-row mx-auto mt-4 ml-8 text-black py-2 h-auto font-mono gap-x-xl w-full">
       <div className=""><img src="/images/HackIllinois.png" className="w-40 h-auto"></img></div>
       <div className="gap-12 ml-auto mt-4 text-white place-items-center justify-center px-4">
         <div className="lg:hidden">
@@ -21,7 +21,7 @@ export const Navbar: FC = () => {
           <Link href="https://2025.hackillinois.org/prizes" className="">
             Prizes
           </Link>
-          <Link href="/" className="">
+          <Link href="/" className="mr-8">
             Credits
           </Link>
         </div>

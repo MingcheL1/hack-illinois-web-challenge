@@ -1,16 +1,15 @@
 import { eventProps } from "@/types/event";
 import { convertTime } from "@/util/functions/date";
-import { MapPin } from "lucide-react";
+import { ArrowBigUp, ArrowBigUpIcon, MapPin } from "lucide-react";
 import { FC, useState } from "react";
 import { Navbar } from "./navbar";
 
-export const Compact: FC<eventProps> = ({ data }) => {
+export const Compact: FC<eventProps> = ({ data, up }) => {
     const [day, setDay]=useState("Friday");
     const filteredEvents=data?.events.filter((event)=>{ return convertTime(event.startTime,true).includes(day);});
     console.log(filteredEvents);
     return (
         <div className=" pt-6 relative w-full min-h-screen bg-cover bg-center bg-fixed bg-[url('/images/compactBG.jpg')] ">
-            <Navbar/>
             <div className="pl-40 pr-8">
                 <div className="inline-flex gap-2 ml-8 mt-10 mb-2 p-2 relative">
                     {
@@ -49,12 +48,12 @@ export const Compact: FC<eventProps> = ({ data }) => {
                                     <p className="text-xl font-bold">
                                         {convertTime(event.startTime,false)}
                                     </p>
-                                    <div className="my-2 flex min-h-16 flex-1 flex-col items-center">
+                                    <div className="flex min-h-16 flex-1 flex-col items-center">
                                         <span className=" text-8xl leading-none text-white font-bold">
                                             ↓
                                         </span>
                                     </div>
-                                    <p className="text-xl font-bold">
+                                    <p className="mt-6 text-xl font-bold">
                                         {convertTime(event.endTime,false)}
                                     </p>
                                 </div>
@@ -68,6 +67,7 @@ export const Compact: FC<eventProps> = ({ data }) => {
                             </div>
                         ))} 
                     </div>
+                    <button className=" fixed bottom-8 right-8 z-50 ml-16 py-4" onClick={up} ><ArrowBigUp className="w-12 h-12 ml-8 fill-yellow-300"></ArrowBigUp></button>
 
             </div>
             

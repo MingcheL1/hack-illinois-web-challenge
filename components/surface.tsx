@@ -1,15 +1,18 @@
 import { ArrowBigDown, ArrowBigDownDash } from "lucide-react";
 import { FC } from "react";
-
-export const Surface: FC = () => {
+type SurfaceProp={
+    dive:()=>void;
+}
+export const Surface: FC <SurfaceProp>= ({dive}) => {
     return(
         <div>
-            <div className="font-bold text-center mt-20">
+            <div className="mt-40 font-bold text-center overflow-hidden">
                 <h1 className="text-8xl text-white mt-5">HackIllinois 2027</h1>
                 <p className="text-3xl">Take a Deep Dive into Our Schedule</p>
+                <button className="mt-20 z-100" onClick={dive}><ArrowBigDown className="w-24 h-24 fill-yellow-300"></ArrowBigDown></button>
             </div>
             <div>
-                <svg className="sea" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 800 400">
+                <svg className="pointer-events-none absolute bottom-0 left-0 w-full" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 800 300">
                     <defs>
                         <linearGradient id="waves" x1="400" y1="600" x2="400" y2="214" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stopColor="#0000FF"></stop>
