@@ -1,5 +1,8 @@
 # Credits & Resources Used
 
+### Libraries & Framworks
+- Framework: Next.JS[https://nextjs.org/]
+- Icon Library: Lucide-React[https://lucide.dev/guide/react/]
 ### Waves on home screen
 https://freefrontend.com/css-waves/
 
